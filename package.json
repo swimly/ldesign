@@ -23,6 +23,7 @@
     "eslint": "^8.19.0",
     "husky": "^8.0.1",
     "lerna": "^5.1.8",
+    "lerna-changelog": "^2.2.0",
     "lint-staged": "^13.0.3",
     "nx": "^14.4.2"
   },
@@ -32,10 +33,23 @@
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
+  "gitHooks": {
+    "pre-commit": "npm run lint"
+  },
   "lint-staged": {
     "*.ts": [
       "eslint --fix",
       "git add"
     ]
+  },
+  "changelog": {
+    "repo": "https://gitee.com/swimly/ldesign.git",
+    "labels": {
+      "feat": ":rocket: New Feature",
+      "bug": ":bug: Bug Fix",
+      "doc": ":memo: Documentation",
+      "internal": ":house: Internal",
+      "breaking": ":boom: Breaking Change"
+    }
   }
 }

@@ -11,6 +11,7 @@
     }
   },
   "useWorkspaces": true,
+  "npmClient": "yarn",
   "useNx": true,
   "version": "independent"
 }
