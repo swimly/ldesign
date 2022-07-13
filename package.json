@@ -5,7 +5,8 @@
     "packages/*"
   ],
   "scripts": {
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "prepare": "husky install"
   },
   "config": {
     "commitizen": {
@@ -13,9 +14,17 @@
     }
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.1",
     "lerna": "^5.1.8",
     "nx": "^14.4.2"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }
