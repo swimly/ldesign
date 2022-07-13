@@ -1,0 +1,13 @@
+{
+  "packages": [
+    "packages/*"
+  ],
+  "command": {
+    "bootstrap": {
+      "hoist": true
+    }
+  },
+  "useWorkspaces": true,
+  "useNx": true,
+  "version": "independent"
+}
